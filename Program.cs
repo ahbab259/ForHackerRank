@@ -351,11 +351,26 @@ namespace ForHackerRank
             //    Console.WriteLine(result);
             //}
             //int result = chocolateFeast(15, 3, 2);
-            List<int> arr = new List<int>();
-            arr.AddRange(new int[] { 3, 3, 2, 1, 3 });
-            int result = equalizeArray(arr);
+            //List<int> arr = new List<int>();
+            //arr.AddRange(new int[] { 3, 3, 2, 1, 3 });
+            //int result = equalizeArray(arr);
+            int result = squares(3,9);
             Console.WriteLine(result);
             Console.Read();
+        }
+
+        static int squares(int a, int b)
+        {
+            //int counter = 0;
+            //for(int i = a; i<=b; i++)
+            //{
+            //    if (i % Math.Sqrt(i) == 0)
+            //    {
+            //        counter++;
+            //    }
+            //}
+            //return counter;
+            return (int)(Math.Floor(Math.Sqrt(b)) - Math.Ceiling(Math.Sqrt(a))) + 1;
         }
 
         static int equalizeArray(List<int> arr)
