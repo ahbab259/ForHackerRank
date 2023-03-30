@@ -359,7 +359,7 @@ namespace ForHackerRank
             Console.Read();
         }
 
-        static int squares(int a, int b)
+        static int squares(int a, int b) 
         {
             //int counter = 0;
             //for(int i = a; i<=b; i++)
