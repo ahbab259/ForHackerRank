@@ -353,7 +353,7 @@ namespace ForHackerRank
             //int result = chocolateFeast(15, 3, 2);
             //List<int> arr = new List<int>();
             //arr.AddRange(new int[] { 3, 3, 2, 1, 3 });
-            //int result = equalizeArray(arr);
+            //int result = equalizeArray(arr); 
             int result = squares(3,9);
             Console.WriteLine(result);
             Console.Read();
