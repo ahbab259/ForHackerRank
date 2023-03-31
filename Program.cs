@@ -325,7 +325,7 @@ namespace ForHackerRank
             ////int d1 = 2, m1 = 7, y1 = 1014;
             ////int d2 = 1, m2 = 1, y2 = 1015;
             ////int result = libraryFine( d1,  m1,  y1,  d2,  m2,  y2);
-            #endregion
+
 
 
             //int n = 5, k = 3;
@@ -354,9 +354,25 @@ namespace ForHackerRank
             //List<int> arr = new List<int>();
             //arr.AddRange(new int[] { 3, 3, 2, 1, 3 });
             //int result = equalizeArray(arr); 
-            int result = squares(3,9); 
+            #endregion
+            //int result = squares(3, 9);
+            int[] c = { 7, 1, 3, 4, 1, 7 };
+            int result = minimumDistances(c.ToList());
             Console.WriteLine(result);
             Console.Read();
+        }
+
+        static int minimumDistances(List<int> a)
+        {
+            Dictionary<int, int> map = new Dictionary<int, int>();
+            List<int> distances = new List<int>();
+            for(int i = 1; i < a.Count() + 1; i++)
+            {
+
+                map.Add(i, a[i]);
+
+            }
+            return 0;
         }
 
         static int squares(int a, int b) 
