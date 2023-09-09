@@ -876,31 +876,30 @@ namespace ForHackerRank
         //not entirely bubblesort; a bit modified
         static int[] bubbleSort(int[] unsortedList)
         {
-            int temp = 0;
 
-            for (int i = 1; i < unsortedList.Length; i++)
-            {
-                if (unsortedList[i - 1] > unsortedList[i])
-                {
-                    temp = unsortedList[i - 1];
-                    unsortedList[i - 1] = unsortedList[i];
-                    unsortedList[i] = temp;
-                    i = 0;
-                }
-            }
-
-            //int i = 1;
-            //while (i < unsortedList.Count())
+            //for (int i = 1; i < unsortedList.Length; i++)
             //{
             //    if (unsortedList[i - 1] > unsortedList[i])
             //    {
-            //        temp = unsortedList[i - 1];
+            //        int temp = unsortedList[i - 1];
             //        unsortedList[i - 1] = unsortedList[i];
             //        unsortedList[i] = temp;
-            //        i = 1;
+            //        i = 0;
             //    }
-            //    else i++;
             //}
+
+            for(int i = 0; i< unsortedList.Length; i++)
+            {
+                for(int j = 0; j< unsortedList.Length - 1 - i; j++)
+                {
+                    if(unsortedList[j] > unsortedList[j + 1])
+                    {
+                        int temp = unsortedList[j];
+                        unsortedList[j] = unsortedList[j + 1];
+                        unsortedList[j + 1] = temp;
+                    }
+                }
+            }
 
             return unsortedList;
         }
