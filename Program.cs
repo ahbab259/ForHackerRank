@@ -356,23 +356,44 @@ namespace ForHackerRank
             //int result = equalizeArray(arr); 
             #endregion
             //int result = squares(3, 9);
-            int[] c = { 7, 1, 3, 4, 1, 7 };
-            int result = minimumDistances(c.ToList());
-            Console.WriteLine(result);
+            //int[] c = { 1, 2, 3, 4, 10 };
+            //int result = minimumDistances(c.ToList());
+            //long result = repeatedString("abcac", 10);
+            int[] unsorted = { 5, 2, 8, 7, 3, 1, 4, 1 };
+            int[] result = bubbleSort(unsorted);
+            //Console.WriteLine(result);
             Console.Read();
+        }
+
+        static long repeatedString(string s, long n)
+        {
+            long result = 0;
+            string newStr = "";
+
+            if(s.Length < n)
+            {
+                for(int i = 0; i < n; i++)
+                {
+                    //newStr.Concat(s[i].ToString());
+                    //if(i )
+                }
+            }
+            return result;
         }
 
         static int minimumDistances(List<int> a)
         {
             Dictionary<int, int> map = new Dictionary<int, int>();
             List<int> distances = new List<int>();
-            for(int i = 1; i < a.Count() + 1; i++)
+            for(int i = 0; i < a.Count(); i++)
             {
-
-                map.Add(i, a[i]);
+                if (!map.ContainsValue(a[i])) map.Add(i, a[i]);
+                else distances.Add(i - map.Where(x => x.Value == a[i]).FirstOrDefault().Key);
 
             }
-            return 0;
+
+            if (distances.Count() == 0) return -1;
+            else return distances.Min();
         }
 
         static int squares(int a, int b) 
@@ -857,7 +878,7 @@ namespace ForHackerRank
         {
             int temp = 0;
 
-            for (int i = 1; i < unsortedList.Count(); i++)
+            for (int i = 1; i < unsortedList.Length; i++)
             {
                 if (unsortedList[i - 1] > unsortedList[i])
                 {
